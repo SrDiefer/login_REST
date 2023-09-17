@@ -72,7 +72,7 @@ public class FormController {
         return paisService.listar();
     }
 
-    @ModelAttribute("ListaRolesString")
+    @ModelAttribute("listaRolesString")
     public List<String> listaRolesString(){
             List<String> roles = new ArrayList<>();
             roles.add("ROLE_ADMIN");
@@ -117,6 +117,7 @@ public class FormController {
         usuario.setValorSecreto("Algun Valor Secreto");
         usuario.setPais(new Pais(3, "CL", "Chile"));
         usuario.setRoles(Arrays.asList(new Role(2, "usuario", "ROLE_USER")));
+        usuario.setCuenta(2);
 
         model.addAttribute("titulo", "FORMULARIO DE USUARIOS");
         model.addAttribute("usuario", usuario);
@@ -130,6 +131,7 @@ public class FormController {
 
         if (result.hasErrors()){
             model.addAttribute("titulo", "RESULTADO FORM");
+            model.addAttribute("usuario", usuario);
             return "form";
         }
         return "redirect:/ver";

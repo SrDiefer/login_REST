@@ -48,6 +48,8 @@ public class Usuario {
 
     private String valorSecreto;
 
+    private Integer cuenta;
+
     public String getIdentificador() {
         return identificador;
     }
@@ -142,6 +144,14 @@ public class Usuario {
 
     public void setValorSecreto(String valorSecreto) {
         this.valorSecreto = valorSecreto;
+    }
+
+    public Integer getCuenta() {
+        return cuenta;
+    }
+
+    public void setCuenta(Integer cuenta) {
+        this.cuenta = cuenta;
     }
 }
 

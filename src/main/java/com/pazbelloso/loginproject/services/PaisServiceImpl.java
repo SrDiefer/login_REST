@@ -1,10 +1,12 @@
 package com.pazbelloso.loginproject.services;
 
 import com.pazbelloso.loginproject.models.domain.Pais;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Service
 public class PaisServiceImpl implements PaisService{
 
     private List<Pais> lista;

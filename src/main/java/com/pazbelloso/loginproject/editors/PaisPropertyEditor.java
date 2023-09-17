@@ -2,12 +2,16 @@ package com.pazbelloso.loginproject.editors;
 
 import com.pazbelloso.loginproject.services.PaisService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import java.beans.PropertyEditorSupport;
 
 @Component
 public class PaisPropertyEditor extends PropertyEditorSupport{
-        @Autowired
+
+
+//    @Qualifier("paisServiceImpl")
+    @Autowired
         private PaisService service;
 
         @Override
